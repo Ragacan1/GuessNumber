@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GuessNumber</string>
+    <string name="tvJugador">Jugador</string>
+    <string name="tvNumIntentos">Nº de intentos:</string>
+    <string name="etJugador">Introduce tu nombre...</string>
+    <string name="etNumIntentos">Inserte el Nº de intentos...</string>
+    <string name="btnJugar">JUGAR</string>
+    <string name="tvFrase">INTENTA ADIVINAR EL NÚMERO</string>
+    <string name="btnAdivinar">ADIVINAR</string>
+    <string name="btnRepetir">JUGAR DE NUEVO</string>
+</resources>
