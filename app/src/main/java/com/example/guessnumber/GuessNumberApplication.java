@@ -2,6 +2,9 @@ package com.example.guessnumber;
 
 import android.app.Application;
 
+/**
+ * Clase que instancia la clase Jugador para permitir al resto de clases manipular los datos del jugador.
+ */
 public class GuessNumberApplication extends Application {
     Jugador jugador;
 

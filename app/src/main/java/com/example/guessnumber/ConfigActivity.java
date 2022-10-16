@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.guessnumber.databinding.ActivityConfigBinding;
 
+/**
+ * Clase ConfigActivity. Es el main activity del proyecto.
+ * Se encarga de gestionar datos del usuario como el nombre y el número de intentos
+ */
 public class ConfigActivity extends AppCompatActivity {
 
     ActivityConfigBinding binding;
@@ -33,6 +37,9 @@ public class ConfigActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Verifica que ningún campo quede vacío
+     */
     public boolean checkCampos() {
         String etJugador = binding.etJugador.getText().toString();
         String etNumIntentos = String.valueOf(binding.etNumIntentos.getText());
@@ -44,6 +51,9 @@ public class ConfigActivity extends AppCompatActivity {
             return true;
     }
 
+    /**
+     * Verifica que el rango de intentos sea entre 1 y 100
+     */
     public boolean checkIntentos() {
         String etNumIntentos = String.valueOf(binding.etNumIntentos.getText());
 

@@ -3,6 +3,10 @@ package com.example.guessnumber;
 import java.io.Serializable;
 import java.util.Random;
 
+/**
+ * Clase que gestiona datos del jugador.
+ * Se establecen campos necesarios para el desarrollo de la aplicación como nombre, intentos, numero a adivinar y estado actual de la partida
+ */
 public class Jugador implements Serializable {
 
     String nombre;

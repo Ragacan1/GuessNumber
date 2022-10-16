@@ -9,6 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.guessnumber.databinding.ActivityEndplayBinding;
 
+/**
+ * Clase final en la que se dan los resultados obtenidos a lo largo de la ejecución del programa.
+ * Permite volver a ejecutar la aplicación
+ */
 public class EndPlayActivity extends AppCompatActivity {
     ActivityEndplayBinding binding;
 
@@ -24,6 +28,10 @@ public class EndPlayActivity extends AppCompatActivity {
         binding.tvnumAdivinar.setText("El número secreto era " + jugador.getNumAdivinar());
     }
 
+    /**
+     * Reinicia el programa volviendo al primer activity, ConfigActivity.
+     * @param view
+     */
     public void repetir(View view) {
         Intent intent = new Intent(this, ConfigActivity.class);
         startActivity(intent);

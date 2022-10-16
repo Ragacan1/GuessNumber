@@ -28,6 +28,9 @@ public class PlayActivity extends AppCompatActivity {
         binding.tvIntentosRestantes.setText("Te quedan " + String.valueOf(jugador.getnIntentos()) + " intentos");
     }
 
+    /**
+     * Comprueba si el número introducido es mayor, menor o igual que el número a adivinar.
+     */
     public void adivinar(View view) {
         if (!checkCampos())
             return;
@@ -62,6 +65,9 @@ public class PlayActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Gestiona el programa en caso de que el jugador inserte un número mayor al número a adivinar
+     */
     public void mayorNum(Intent intent, AlertDialog.Builder dialogo) {
         if (jugador.getnIntentos() == 1) {
             jugador.setPartida("perdido");
@@ -74,6 +80,9 @@ public class PlayActivity extends AppCompatActivity {
         dialogo.show();
     }
 
+    /**
+     * Gestiona el programa en caso de que el jugador inserte un número menor al número a adivinar
+     */
     public void menorNum(Intent intent, AlertDialog.Builder dialogo) {
         if (jugador.getnIntentos() == 1) {
             jugador.setPartida("perdido");
@@ -86,6 +95,9 @@ public class PlayActivity extends AppCompatActivity {
         dialogo.show();
     }
 
+    /**
+     * Gestiona el programa en caso de que el jugador inserte un número igual al número a adivinar
+     */
     public void victoria(Intent intent) {
         jugador.setPartida("ganado");
         jugador.setnIntentosActual(jugador.getnIntentosActual() + 1);
@@ -93,6 +105,9 @@ public class PlayActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * Verifica que ningún campo quede vacío
+     */
     public boolean checkCampos() {
         String etNumero = binding.etNumero.getText().toString();
 
